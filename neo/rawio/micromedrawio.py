@@ -68,7 +68,7 @@ class MicromedRawIO(BaseRawWithBufferApiIO):
 
             # header version
             (header_version,) = f.read_f("b", offset=175)
-            if header_version != 4:
+            if header_version != 5:
                 raise NotImplementedError(f"`header_version {header_version} is not implemented in neo yet")
 
             # area
